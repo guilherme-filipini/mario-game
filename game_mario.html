@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Jump</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <div class="game-board">
+        <!-- Botão para exibir o score -->
+        <button id="scoreButton" class="marioButton">Score: 0</button>
+        <!-- Div para exibir o texto de "Game Over" -->
+        <div id="gameOverText" class="game-over-text">Game Over</div>
+        <!-- Div para exibir a mensagem de "Congratulations" -->
+        <div id="congratulations" class="congratulations">Congratulations</div>
+        <!-- Botão para reiniciar o jogo -->
+        <button id="restartButton" class="restart-button marioButton" >Restart</button>
+        <!-- Botão para retornar ao menu principal -->
+        <button id="mainMenu_Button" class="mainMenu-button marioButton">Main Menu</button>
+        <!-- Imagem de fundo com nuvens -->
+        <img src="images/clouds.png" class="clouds">
+        <!-- Imagem do personagem Mario -->
+        <img src="images/mario.gif" class="mario">
+        <!-- Imagem do cano -->
+        <img src="images/pipe.png" class="pipe">
+        <!-- Elementos de áudio -->
+        <audio id="jumpSound">
+            <source src="audio/mario_jump.mp3" type="audio/mpeg"> <!-- Som de pulo do Mario -->
+        </audio>
+        <audio id="gameOverMario">
+            <source src="audio/game_over_mario.mp3" type="audio/mpeg"> <!-- Som de Game Over do Mario -->
+        </audio>
+        <audio id="marioSoundtrack">
+            <source src="audio/mario_soundtrack.mp3" type="audio/mpeg"> <!-- Trilha sonora do jogo do Mario -->
+        </audio>
+        <audio id="levelCompleteMario">
+            <source src="audio/mario_level_complete.mp3" type="audio/mpeg"> <!-- Som de conclusão de fase do Mario -->
+        </audio>
+    </div>
+</body>
+</html>

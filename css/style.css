@@ -1,0 +1,299 @@
+/* Define o estilo para todos os elementos, zerando as margens e preenchimentos e ajustando a caixa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define o fundo do corpo da página */
+body {
+    background: rgb(50, 50, 50);
+}
+
+/* Remove a decoração de texto e define a cor para links */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Define o fundo para a seção principal, com uma imagem de fundo */
+main {
+    background-image: url('../images/green_hill-menu.gif');
+    background-size: cover; /* Para ajustar a imagem para cobrir todo o corpo */
+}
+
+/* Define o estilo para figuras dentro de artigos */
+.article-gif {
+    background-image: url('../images/green_hill-menu.gif');
+    background-size: cover; /* Para ajustar a imagem para cobrir todo o corpo */
+}
+
+/* Define o estilo para o título */
+.title {
+    width: 25%;
+}
+
+/* Define o estilo para o painel do jogo */
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+/* Define o estilo para o painel do jogo Sonic */
+.game-board-sonic {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+/* Define o estilo para os cabeçalhos */
+h1, h2, h3 {
+    color: white;
+}
+
+/* Define o estilo para figuras */
+figure {
+    border: 5px solid white;
+    width: 20%;
+    margin-left: 40%;
+}
+
+/* Define o estilo para a figura do Mario */
+.mario-figure {
+    background-image: url(../images/mario-back.gif);
+    background-size: cover; /* Redimensiona a imagem para metade da largura do elemento e altura automática */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: 137px;
+}
+
+/* Define o estilo para o ícone de bloqueio */
+.lock {
+    background-image: url(../images/chains.webp);
+    background-size: 100% auto; /* Redimensiona a imagem para metade da largura do elemento e altura automática */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: 137px;
+}
+
+/* Define o estilo para a figura do Sonic */
+.sonic-figure {
+    background-image: url(../images/green_hill.gif);
+    background-size: 100% auto; /* Redimensiona a imagem para metade da largura do elemento e altura automática */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: 137px;
+}
+
+/* Define o estilo para botões de menu */
+.button-menu {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgb(126, 126, 126);
+    transition: transform 0.3s ease;
+}
+
+/* Define o estilo para botões de menu ao passar o mouse */
+.button-menu:hover {
+    transform: scale(1.1); /* Aumenta a escala do elemento em 10% ao passar o mouse sobre ele */
+}
+
+/* Define o estilo para botões do Mario */
+.marioButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: green;
+    border-radius: 10px;
+    position: absolute; /* Define a posição como absoluta */
+    z-index: 1; /* Coloca o botão em uma camada acima */
+}
+
+/* Define o estilo para botões do Sonic */
+.sonicButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 10px;
+    position: absolute; /* Define a posição como absoluta */
+    z-index: 1; /* Coloca o botão em uma camada acima */
+}
+
+/* Define o estilo para os canos */
+.pipe {
+    position: absolute; /* Define a posição como absoluta */
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear; /* Define a animação de movimento */
+}
+
+/* Define o estilo para o Mario */
+.mario {
+    width: 150px;
+    position: absolute; /* Define a posição como absoluta */
+    bottom: 0;
+}
+
+/* Define o estilo para o Sonic */
+.sonic {
+    position: absolute; /* Define a posição como absoluta */
+    bottom: -45px;
+}
+
+
+/* Define o estilo para o inimigo do Sonic */
+.sonic-enemy {
+    position: absolute; /* Define a posição como absoluta */
+    bottom: 0;
+    width: 100px;
+    animation: pipe-animation 1.5s infinite linear; /* Define a animação de movimento */
+}
+
+/* Define o estilo para as nuvens */
+.clouds {
+    position: absolute; /* Define a posição como absoluta */
+    width: 550px;
+    animation: clouds-animation 10s infinite linear; /* Define a animação de movimento */
+}
+
+/* Define o estilo para a cauda do personagem */
+.tails {
+    position: absolute; /* Define a posição como absoluta */
+    width: 200px;
+    animation: clouds-animation 10s infinite linear; /* Define a animação de movimento */
+}
+
+/* Define o estilo para a classe de animação de pulo */
+.jump {
+    animation: jump 500ms ease-out; /* Define a animação de pulo */
+}
+
+/* Define o estilo para a mensagem de congratulações */
+.congratulations {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Define a posição como absoluta */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: green;
+    font-family: 'Super Mario 256', sans-serif;
+}
+
+/* Define o estilo para a mensagem de congratulações do Sonic */
+.congratulations-sonic {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Define a posição como absoluta */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: blue;
+    font-family: 'NiseSegaSonic', sans-serif;
+}
+
+/* Define o estilo para o texto de game over */
+.game-over-text {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Define a posição como absoluta */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: red;
+    font-family: 'Super Mario 256', sans-serif;
+}
+
+/* Define o estilo para o texto de game over do Sonic */
+.game-over-text-sonic {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Define a posição como absoluta */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: rgb(255, 191, 0);
+    font-family: 'NiseSegaSonic', sans-serif;
+}
+
+/* Define o estilo para o botão de reinício */
+.restart-button {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Define a posição como absoluta */
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    cursor: pointer;
+}
+
+/* Define o estilo para o botão de menu principal */
+.mainMenu-button {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Define a posição como absoluta */
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    cursor: pointer;
+}
+
+/* Define a animação de movimento para os canos */
+@keyframes pipe-animation {
+    from {
+        right: -80px; /* Início fora da tela */
+    }
+    to {
+        right: 100%; /* Final no lado direito da tela */
+    }
+}
+
+/* Define a animação de pulo */
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 200px;
+    }
+    60% {
+        bottom: 200px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+/* Define a animação de movimento para as nuvens */
+@keyframes clouds-animation {
+    from {
+        right: -550px; /* Início fora da tela */
+    }
+    to {
+        right: 100%; /* Final no lado direito da tela */
+    }
+}
+
+/* Define a animação de movimento para a descida do Mario */
+@keyframes marioDescend {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 20px;
+    }
+    50% {
+        bottom: 20px;
+    }
+    100% {
+        bottom: -200px; /* Final acima da tela */
+    }
+}

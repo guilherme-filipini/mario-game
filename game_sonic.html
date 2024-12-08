@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Jump</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script_sonic.js" defer></script>
+</head>
+<body>
+    <div class="game-board-sonic">
+            <button id="scoreButton" class="sonicButton">Score: 0</button> <!-- Botão para exibir a pontuação do jogo -->
+            <div id="gameOverText" class="game-over-text-sonic">Game Over</div> <!-- Div para exibir o texto de fim de jogo -->
+            <div id="congratulations" class="congratulations-sonic">Congratulations</div> <!-- Div para exibir a mensagem de parabéns -->
+            <button id="restartButton" class="restart-button sonicButton">Restart</button> <!-- Botão para reiniciar o jogo -->
+            <button id="mainMenu_Button" class="mainMenu-button sonicButton">Main Menu</button> <!-- Botão para voltar ao menu principal -->
+            <img src="images/sonic-run.gif" class="sonic"> <!-- Imagem do Sonic em estado de corrida -->
+            <img src="images/sonic-enemy.gif" class="sonic-enemy"> <!-- Imagem do inimigo do Sonic -->
+            <img src="images/tails-plane.gif" class="tails"> <!-- Imagem do personagem Tails -->
+            <audio id="jumpSound"> <!-- Elemento de áudio para o som do pulo do Sonic -->
+                <source src="audio/sonic_jump.mp3" type="audio/mpeg"> <!-- Fonte de áudio do som do pulo do Sonic -->
+            </audio>
+            <audio id="gameOverSonic"> <!-- Elemento de áudio para o som de fim de jogo do Sonic -->
+                <source src="audio/game_over_sonic.mp3" type="audio/mpeg"> <!-- Fonte de áudio do som de fim de jogo do Sonic -->
+            </audio>
+            <audio id="sonicSoundtrack"> <!-- Elemento de áudio para a trilha sonora do Sonic -->
+                <source src="audio/sonic_soundtrack.mp3" type="audio/mpeg"> <!-- Fonte de áudio da trilha sonora do Sonic -->
+            </audio>
+            <audio id="levelCompleteSonic"> <!-- Elemento de áudio para o som de conclusão de nível do Sonic -->
+                <source src="audio/sonic_level_complete.mp3" type="audio/mpeg"> <!-- Fonte de áudio do som de conclusão de nível do Sonic -->
+            </audio>
+            <audio id="sonicHit"> <!-- Elemento de áudio para o som de pontuação do Sonic -->
+                <source src="audio/sonic_point.mp3" type="audio/mpeg"> <!-- Fonte de áudio do som de pontuação do Sonic -->
+            </audio>
+    </div>
+</body>
+</html>
